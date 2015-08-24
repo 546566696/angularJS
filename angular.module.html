@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body ng-app="myApp1" ng-controller="myCtrl"> 
+	<input type="text" ng-model="firstName">
+	<input type="text" ng-model="lastName">
+	<p>{{fullName()}}</p>
+
+</body>
+<script src="angular/angular.min.js"></script>
+<script>
+	var app=angular.module('myApp1',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.firstName="强强";
+		$scope.lastName="明明";
+		$scope.fullName=function(){
+			return $scope.lastName+" "+$scope.firstName;
+		}
+	});
+</script>
+</html>
