@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8"/>
+	<script src="angular/angular.min.js"></script>
+	
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myCtrl">
+		名：<input type="text" ng-model="firstName"><br/>
+		姓：<input type="text" ng-model="lastName"><br/>
+	
+		<p>姓名为：{{firstName + " " + lastName}}</p>
+		<!--HTML5 允许扩展的（自制的）属性，以 data- 开头。
+AngularJS 属性以 ng- 开头，但是您可以使用 data-ng- 来让网页对 HTML5 有效。-->
+	</div>
+	<script>
+		var app=angular.module('myApp',[])
+		app.controller('myCtrl',
+		function ($scope){
+			$scope.firstName="强强";
+			$scope.lastName="小明";
+		}
+		);
+	</script>
+</body>
+
+</html>
